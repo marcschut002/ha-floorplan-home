@@ -25,7 +25,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="2.2396319"
-     inkscape:cx="409.21903"
+     inkscape:cx="409.44228"
      inkscape:cy="185.52156"
      inkscape:window-width="1376"
      inkscape:window-height="690"
@@ -51,7 +51,7 @@
        id="layer3"
        inkscape:label="Overkapping"><rect
          style="fill:#5b5b5b;fill-opacity:1;stroke-width:0.264583"
-         id="rect1"
+         id="light.overkapping"
          width="99.51606"
          height="39.423779"
          x="79.451004"
