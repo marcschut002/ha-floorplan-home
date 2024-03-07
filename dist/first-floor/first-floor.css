@@ -1,15 +1,36 @@
 /* First Floor Styling */
 
 #floorplan  {
-    padding: 10px;
-  }
+  padding: 10px;
+}
   
-  #floorplan > svg {
-    max-width: 700px;
-  }
+#floorplan > svg {
+  max-width: 700px;
+}
   
-  /* SVG elements */
-  
-  svg * {
-    vector-effect: non-scaling-stroke !important;
-  }
+/* SVG shapes */
+
+svg, svg * {
+  vector-effect: non-scaling-stroke !important;
+  pointer-events: all !important;
+}
+
+/* Hover over */
+.ha-entity:hover {
+  stroke: #03A9F4 !important;
+  stroke-width: 1px !important;
+  stroke-opacity: 1 !important;
+}
+
+  /* Light Control */
+
+path[id*="area."].light-on{
+  opacity: 0 !important;
+}
+
+path[id*="area."]{
+  opacity: 0.5 !important;
+  transition: opacity .25s;
+  -moz-transition: opacity .25s;
+  -webkit-transition: opacity .25s;
+}
