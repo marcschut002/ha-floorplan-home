@@ -25,12 +25,12 @@ svg, svg * {
   /* Light Control */
 
 path[id*="area."].light-on{
-  opacity: 0.2 !important;
+  opacity: 0.3 !important;
   fill: rgb(171, 148, 52) !important;
 }
 
 path[id*="area."]{
-  opacity: 0.4 !important;
+  opacity: 0.5 !important;
   transition: opacity .25s;
   -moz-transition: opacity .25s;
   -webkit-transition: opacity .25s;
