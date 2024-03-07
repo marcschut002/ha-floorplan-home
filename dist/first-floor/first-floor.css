@@ -26,7 +26,7 @@ svg, svg * {
 
 path[id*="area."].light-on{
   opacity: 0.2 !important;
-  fill: rgb(171, 148, 52)
+  fill: rgb(171, 148, 52) !important;
 }
 
 path[id*="area."]{
