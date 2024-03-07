@@ -23,7 +23,6 @@ svg, svg * {
 }
 
   /* Light Control */
-
 path[id*="area."].light-on{
   opacity: 0.3 !important;
   fill: rgb(171, 148, 52) !important;
