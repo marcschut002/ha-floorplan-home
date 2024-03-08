@@ -29,7 +29,7 @@ path[id*="area."].light-on{
 }
 
 path[id*="area."]{
-  opacity: 0.5 !important;
+  opacity: 0 !important;
   transition: opacity .25s;
   -moz-transition: opacity .25s;
   -webkit-transition: opacity .25s;
