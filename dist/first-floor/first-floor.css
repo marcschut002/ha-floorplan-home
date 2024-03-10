@@ -32,6 +32,10 @@ g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
 }
 
+g[id*="button."].light-on > path[id*="button.area"]{
+  opacity: 1 !important;
+}
+
 path[id*="area."]{
   opacity: 0 !important;
   transition: opacity .25s;
