@@ -28,12 +28,8 @@ path[id*="area."].light-on{
   background: radial-gradient(circle at 50% 50%, rgba(253, 255, 163, 1) 50%, rgba(238, 130, 238, 0) 100%) !important;
 }
 
-path[id*="button.icon"].light-on{
+path[id*="button."].light-on{
   background-color: yellow;
-}
-
-path[id*="button.icon"].light-off{
-  background-color: gray;
 }
 
 path[id*="area."]{
