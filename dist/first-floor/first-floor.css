@@ -22,6 +22,14 @@ svg, svg * {
   stroke-opacity: 1 !important;
 }
 
+/* Hide Area */
+path[id*="area."]{
+  opacity: 0 !important;
+  transition: opacity .25s;
+  -moz-transition: opacity .25s;
+  -webkit-transition: opacity .25s;
+}
+
   /* Light Control */
 path[id*="area."].light-on{
   opacity: 0.3 !important;
@@ -32,13 +40,6 @@ g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
 }
 
-g[id*="button."].light-on > path[id*="button.area"]{
+g[id*="button."].light-on > path[id*="area."]{
   opacity: 1 !important;
-}
-
-path[id*="area."]{
-  opacity: 0 !important;
-  transition: opacity .25s;
-  -moz-transition: opacity .25s;
-  -webkit-transition: opacity .25s;
 }

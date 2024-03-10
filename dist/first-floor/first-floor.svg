@@ -32,7 +32,7 @@
      inkscape:window-x="34"
      inkscape:window-y="26"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer1"
      showgrid="false" /><defs
      id="defs1"><linearGradient
        id="linearGradient8"
@@ -191,8 +191,8 @@
          transform="translate(43.508245,77.750847)"><path
            d="m 151.03638,108.23651 v 47.21378 h 41.01041 v -47.21378 z"
            style="display:inline;fill:url(#radialGradient2);stroke-width:0.185874"
-           id="button.area_keukentafel"
-           inkscape:label="button.area_keukentafel"
+           id="area.keukentafel"
+           inkscape:label="area.keukentafel"
            transform="translate(-43.508245,-77.750847)" /><circle
            style="display:inline;fill:#272727;fill-opacity:1;stroke-width:0.264999;stroke-dasharray:none"
            id="button.background_keuken"
