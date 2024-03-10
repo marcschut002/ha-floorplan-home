@@ -180,7 +180,7 @@
          transform="translate(43.508245,77.750847)"><path
            d="m 151.03638,108.23651 v 47.21378 h 41.01041 v -47.21378 z"
            style="display:inline;fill:url(#radialGradient2);stroke-width:0.185874"
-           id="area.keukentafel"
+           id="button.area_keukentafel"
            inkscape:label="button.area_keukentafel"
            transform="translate(-43.508245,-77.750847)" /><circle
            style="display:inline;fill:#272727;fill-opacity:1;stroke-width:0.264999;stroke-dasharray:none"
