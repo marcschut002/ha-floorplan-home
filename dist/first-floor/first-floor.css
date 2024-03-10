@@ -25,7 +25,7 @@ svg, svg * {
   /* Light Control */
 path[id*="area."].light-on{
   opacity: 0.3 !important;
-  fill: rgb(171, 148, 52) !important;
+  background: radial-gradient(circle at 50% 50%, rgba(253, 255, 163, 1) 50%, rgba(238, 130, 238, 0) 100%) !important;
 }
 
 path[id*="area."]{
