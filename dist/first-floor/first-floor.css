@@ -30,16 +30,10 @@ path[id*="area."]{
   -webkit-transition: opacity .25s;
 }
 
-  /* Light Control */
-path[id*="area."].light-on{
-  opacity: 0.3 !important;
-  background: radial-gradient(circle at 50% 50%, rgba(253, 255, 163, 1) 50%, rgba(238, 130, 238, 0) 100%) !important;
-}
-
 g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
 }
 
-g[id*="button."].light-on > path[id*="area."]{
+g[id*="button."].light-on > [id*="area."]{
   opacity: 1 !important;
 }
