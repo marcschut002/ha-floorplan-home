@@ -1,5 +1,6 @@
 {
     "name": "Floorplan Blankena",
     "render_readme": true,
-    "content_in_root": false
+    "content_in_root": false,
+    "filename": "floorplan-blankena.js"
 }
