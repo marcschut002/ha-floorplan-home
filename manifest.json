@@ -1,0 +1,10 @@
+{
+    "domain": "ha_floorplan_home",
+    "name": "Floorplan Blankena",
+    "version": "1.0.0",
+    "documentation": "https://github.com/marcschut002/ha-floorplan-home",
+    "dependencies": [],
+    "codeowners": ["@marcschut002"],
+    "requirements": []
+  }
+  
