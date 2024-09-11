@@ -28,6 +28,6 @@ g[id*="button."].light-on > path[id*="button.icon"]{
 }
 
 
-g[id*="sensor."] > text {
-  font-size: 2em;
+g[id*="sensor."].text {
+  font-size: 10px;
 }
