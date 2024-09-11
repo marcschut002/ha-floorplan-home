@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.1359078"
-     inkscape:cx="536.77411"
-     inkscape:cy="416.91874"
+     inkscape:zoom="4.9416629"
+     inkscape:cx="539.59569"
+     inkscape:cy="500.13529"
      inkscape:window-width="1376"
      inkscape:window-height="846"
      inkscape:window-x="0"
@@ -157,8 +157,8 @@
        inkscape:groupmode="layer"
        id="layer4"
        inkscape:label="Keuken"><path
-         d="m 125.02606,127.48791 v 27.75602 h 26.02171 v -27.75602 z"
-         style="display:inline;fill:none;fill-opacity:0.302885;stroke-width:0.113523"
+         d="m 125.02606,127.48791 v 27.97019 h 26.02171 v -27.97019 z"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.11396"
          id="area.keuken.2"
          inkscape:label="area.keuken.2" /><path
          d="M 80.518998,77.495452 V 127.40031 H 105.12724 V 77.495452 Z"
@@ -174,7 +174,7 @@
          style="display:inline"
          transform="translate(43.508245,77.750847)"><path
            d="m 151.03638,108.23651 v 47.21378 h 41.01041 v -47.21378 z"
-           style="display:inline;fill:none;stroke-width:0.185874;fill-opacity:0.58173078"
+           style="display:inline;fill:#ffffff;stroke-width:0.185874;fill-opacity:1"
            id="area.keukentafel"
            inkscape:label="area.keukentafel"
            transform="translate(-43.508245,-77.750847)" /><circle
