@@ -33,5 +33,6 @@ g[id*="button."].light-on > path[id*="button.icon"]{
 }
 
 g[id*="button."].light-on > [id*="area."]{
-  opacity: 1 !important;
+  background: rgb(252,255,214) !important;
+  background: radial-gradient(circle, rgba(252,255,214,1) 47%, rgba(255,255,255,0) 100%) !important;
 }
