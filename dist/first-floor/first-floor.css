@@ -22,17 +22,12 @@ svg, svg * {
   stroke-opacity: 1 !important;
 }
 
-/* Hide Area */
-path[id*="area."]{
-  fill: gray !important;
-  opacity: 0 !important;
-}
 
 g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
 }
 
-g[id*="button."].light-on > [id*="area."]{
-  opacity: 1 !important;
-  background: radial-gradient(circle, rgba(252,255,214,1) 47%, rgba(255,255,255,0) 100%) !important;
+
+g[id*="sensor."] > text {
+  font-size: 2em;
 }
