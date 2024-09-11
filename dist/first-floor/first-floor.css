@@ -37,3 +37,12 @@ g[id*="button."].light-on > path[id*="button.icon"]{
 g[id*="button."].light-on > [id*="area."]{
   opacity: 1 !important;
 }
+
+/* Floor color */
+path[id*="floor."]{
+  opacity: 0 !important;
+  transition: opacity .25s;
+  -moz-transition: opacity .25s;
+  -webkit-transition: opacity .25s;
+  fill: gray !important;
+}
