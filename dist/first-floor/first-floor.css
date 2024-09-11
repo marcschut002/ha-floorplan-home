@@ -40,9 +40,6 @@ g[id*="button."].light-on > [id*="area."]{
 
 /* Floor color */
 path[id*="floor."]{
-  opacity: 0 !important;
-  transition: opacity .25s;
-  -moz-transition: opacity .25s;
-  -webkit-transition: opacity .25s;
+  opacity: 0.5 !important;
   fill: gray !important;
 }
