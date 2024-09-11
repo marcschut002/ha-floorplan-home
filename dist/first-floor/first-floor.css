@@ -27,7 +27,14 @@ g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
 }
 
+g[id*="sensor."] > text > tspan {
+  font-size: 10px !important;
+}
+
+g[id*="sensor."].text > tspan {
+  font-size: 10px !important;
+}
 
 g[id*="sensor."].text {
-  font-size: 10px;
+  font-size: 10px !important;
 }
