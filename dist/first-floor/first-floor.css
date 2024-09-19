@@ -23,7 +23,7 @@ svg, svg * {
 }
 
 /* Lights Off */
-image[id*="button."].light-off > path[id*="button.on"]{
+g[id*="button."].light-off > image[id*="button.on"]{
   opacity: 0 !important;
 }
 
@@ -32,7 +32,7 @@ g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
 }
 
-image[id*="button."].light-on > path[id*="button.on"]{
+g[id*="button."].light-on > image[id*="button.on"]{
   opacity: 1 !important;
 }
 
