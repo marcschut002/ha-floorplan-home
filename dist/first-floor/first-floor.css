@@ -29,7 +29,7 @@ g[id*="button."].light-off > image[id*="button.on"]{
 
 /* Lights On */
 g[id*="button."].light-on > path[id*="button.icon"]{
-  fill: yellow !important;
+  fill: rgb(255,255,102) !important;
 }
 
 g[id*="button."].light-on > image[id*="button.on"]{
