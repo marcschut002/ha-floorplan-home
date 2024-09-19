@@ -22,8 +22,18 @@ svg, svg * {
   stroke-opacity: 1 !important;
 }
 
+/* Lights Off */
+g[id*="button."] > path[id*="button.on"]{
+  opacity: 0 !important;
+}
+
+/* Lights On */
 g[id*="button."].light-on > path[id*="button.icon"]{
   fill: yellow !important;
+}
+
+g[id*="button."].light-on > path[id*="button.on"]{
+  opacity: 1 !important;
 }
 
 g[id*="sensor."] > text > tspan {
