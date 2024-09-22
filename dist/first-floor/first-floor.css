@@ -41,3 +41,7 @@ g[id*="sensor."] > text > tspan {
   fill: white !important;
   text-shadow: 1px 4px 2px gray !important;
 }
+
+g[id="sensor.rav4_fuel_level"] > text > tspan {
+  font-size: 6px !important;
+}
