@@ -38,4 +38,6 @@ g[id*="button."].light-on > image[id*="button.on"]{
 
 g[id*="sensor."] > text > tspan {
   font-size: 8px !important;
+  fill: white !important;
+  text-shadow: 1px 4px 2px gray !important;
 }
