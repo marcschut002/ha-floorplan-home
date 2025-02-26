@@ -1,0 +1,47 @@
+/* First Floor Styling */
+
+#floorplan  {
+  padding: 10px;
+}
+  
+#floorplan > svg {
+  max-width: 700px;
+}
+  
+/* SVG shapes */
+
+svg, svg * {
+  vector-effect: non-scaling-stroke !important;
+  pointer-events: all !important;
+}
+
+/* Hover over */
+.ha-entity:hover {
+  stroke: #03A9F4 !important;
+  stroke-width: 1px !important;
+  stroke-opacity: 1 !important;
+}
+
+/* Lights Off */
+g[id*="button."].light-off > image[id*="button.on"]{
+  opacity: 0 !important;
+}
+
+/* Lights On */
+g[id*="button."].light-on > path[id*="button.icon"]{
+  fill: rgb(255,255,102) !important;
+}
+
+g[id*="button."].light-on > image[id*="button.on"]{
+  opacity: 1 !important;
+}
+
+g[id*="sensor."] > text > tspan {
+  font-size: 8px !important;
+  fill: white !important;
+  text-shadow: 1px 4px 2px gray !important;
+}
+
+g[id="sensor.rav4_fuel_level"] > text > tspan {
+  font-size: 6px !important;
+}
