@@ -1,12 +1,53 @@
 type: picture-elements
 image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=4C5028942B9C81822E45CF90B2469F72
 elements:
+  - type: custom:config-template-card
+    variables:
+      LIGHT_STATE: states['light.dimmer_overkapping'].state
+      COLOR_MODE: states['light.dimmer_overkapping'].attributes.color_mode
+      LIGHT_COLOR: states['light.dimmer_overkapping'].attributes.hs_color
+      BRIGHTNESS: states['light.dimmer_overkapping'].attributes.brightness
+    entities:
+      - light.dimmer_overkapping
+    element:
+      type: image
+      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      state_image:
+        'on': >-
+          ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=468B6CE5D04AA1CB05D96C83313D4C8D' :
+          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=7FDB3DFC7C4C5819010E630B10C2718B' }
+      entity: light.dimmer_overkapping
+    style:
+      filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
+      opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+      mix-blend-mode: lighten
+      pointer-events: none
+      left: 50%
+      top: 50%
+      width: 100%
+  - type: state-icon
+    entity: light.dimmer_overkapping
+    title: null
+    style:
+      top: 53.94%
+      left: 65.09%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
   - type: state-icon
     entity: camera.carport
     title: null
     style:
-      top: 36.74%
-      left: 18.62%
+      top: 32.95%
+      left: 48.78%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
