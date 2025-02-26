@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=B0A33FE0CFC5D63CDF589E33ED10F419
+image: /local/floorplan/base.png?version=6A4E6BBE88DC0614B9BEFDDFDFDD092F
 elements:
   - type: custom:config-template-card
     variables:
@@ -11,12 +11,12 @@ elements:
       - light.dimmer_overkapping
     element:
       type: image
-      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      image: /local/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
       state_image:
         'on': >-
           ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=2099752279ABB4C01993DA2856BF439C' :
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=15FC7F110FF97427FA16298BB1CE7465' }
+          '/local/floorplan/light.dimmer_overkapping.png?version=C0E02D106154FD95DFF2F3DD58B593DE' :
+          '/local/floorplan/light.dimmer_overkapping.red.png?version=9C220244DD2962A437B92F428016723D' }
       entity: light.dimmer_overkapping
     style:
       filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
@@ -30,8 +30,8 @@ elements:
     entity: light.dimmer_overkapping
     title: null
     style:
-      top: 53.52%
-      left: 72.81%
+      top: 53.65%
+      left: 72.80%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -46,8 +46,8 @@ elements:
     entity: camera.carport
     title: null
     style:
-      top: 26.95%
-      left: 48.36%
+      top: 26.63%
+      left: 48.29%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
