@@ -2,5 +2,4 @@
 Floorplan for home
 
 ## replace
-/local/
-/hacsfiles/ha-floorplan-home/beganegrond/
+./pre-commit-replace-paths.sh

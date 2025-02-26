@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=6DED8A7CEBCE4CAE79ED2F4022291C68
+image: /hacsfiles/ha-floorplan-home/floorplan/base.png?version=CDE63E5D25B7D4FBEC0D26211D1CE867
 elements:
   - type: custom:config-template-card
     variables:
@@ -11,12 +11,12 @@ elements:
       - light.dimmer_overkapping
     element:
       type: image
-      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      image: /hacsfiles/ha-floorplan-home/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
       state_image:
         'on': >-
           ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=B8BE41EEA953C9C1B9D0A11BACCF5A93' :
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=057DB5257950A06333BF023A3C2B9584' }
+          '/hacsfiles/ha-floorplan-home/floorplan/light.dimmer_overkapping.png?version=A965E1F756AAF3BB6C22A5DD9A3089C3' :
+          '/hacsfiles/ha-floorplan-home/floorplan/light.dimmer_overkapping.red.png?version=972B54E579944FE1A23B3732151B9372' }
       entity: light.dimmer_overkapping
     style:
       filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
