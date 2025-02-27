@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=618C92E951F8CD9A206D685A59720F1E
+image: /local/floorplan/base.png?version=883D869511E37B0463F5B705AC02D040
 elements:
   - type: custom:config-template-card
     variables:
@@ -11,12 +11,12 @@ elements:
       - light.dimmer_overkapping
     element:
       type: image
-      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      image: /local/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
       state_image:
         'on': >-
           ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=96B73AEE60EE568516F40D06777F8300' :
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=3E5A1EBBEC9AE416FFE99ACA9D2A114B' }
+          '/local/floorplan/light.dimmer_overkapping.png?version=A416A4017C1DAA18814FA6A62E041A33' :
+          '/local/floorplan/light.dimmer_overkapping.red.png?version=75B0C0C7A9E51CE9BF7824B6801315AC' }
       entity: light.dimmer_overkapping
     style:
       filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
@@ -30,8 +30,8 @@ elements:
     entity: light.dimmer_overkapping
     title: null
     style:
-      top: 54.12%
-      left: 75.30%
+      top: 66.25%
+      left: 65.47%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -46,8 +46,8 @@ elements:
     entity: sensor.woonkamer_temperature
     title: null
     style:
-      top: 55.51%
-      left: 41.83%
+      top: 48.46%
+      left: 43.37%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -62,8 +62,40 @@ elements:
     entity: camera.carport
     title: null
     style:
-      top: 24.35%
-      left: 48.12%
+      top: 32.60%
+      left: 54.29%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: more-info
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: binary_sensor.multisensor_overkapping_motion_detection_2
+    title: null
+    style:
+      top: 60.39%
+      left: 62.60%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: more-info
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: camera.overkapping
+    title: null
+    style:
+      top: 81.35%
+      left: 56.07%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
