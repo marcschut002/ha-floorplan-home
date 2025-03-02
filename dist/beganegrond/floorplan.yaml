@@ -1,6 +1,69 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=1AAE9CA8D6A0783D171C9AAAC6C6B47F
+image: /local/floorplan/base.png?version=20B9BDFCE8E8E4FF71DC79881B21F138
 elements:
+  - type: conditional
+    conditions:
+      - entity: light.aanrecht
+        state: 'on'
+      - entity: light.keukentafel_spot
+        state: 'off'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        entity:
+          - light.aanrecht
+          - light.keukentafel_spot
+        image: /local/floorplan/light.aanrecht.png?version=EE45FDFBC6C9F51DA9282C6D6D4F2E9B
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    conditions:
+      - entity: light.aanrecht
+        state: 'on'
+      - entity: light.keukentafel_spot
+        state: 'on'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        entity:
+          - light.aanrecht
+          - light.keukentafel_spot
+        image: /local/floorplan/light.aanrecht_light.keukentafel_spot.png?version=5C653659DEF34BA30B92B6E6180B2C73
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    conditions:
+      - entity: light.aanrecht
+        state: 'off'
+      - entity: light.keukentafel_spot
+        state: 'on'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        entity:
+          - light.aanrecht
+          - light.keukentafel_spot
+        image: /local/floorplan/light.keukentafel_spot.png?version=3A2963DB4FF1F666D5D88B9A335A0A43
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
   - type: custom:config-template-card
     variables:
       LIGHT_STATE: states['light.dimmer_overkapping'].state
@@ -11,12 +74,12 @@ elements:
       - light.dimmer_overkapping
     element:
       type: image
-      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      image: /local/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
       state_image:
         'on': >-
           ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=9B621F71470194BCB27CC80E04F8AF84' :
-          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=62F24FAE7E27260CF009F1E317CAC26A' }
+          '/local/floorplan/light.dimmer_overkapping.png?version=3D552AC0EBCD1D13E8AFC4B1527DC6CC' :
+          '/local/floorplan/light.dimmer_overkapping.red.png?version=954B1FD70A3E320FA116F724084F9793' }
       entity: light.dimmer_overkapping
     style:
       filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
@@ -30,8 +93,8 @@ elements:
     entity: light.dimmer_overkapping
     title: null
     style:
-      top: 53.30%
-      left: 75.04%
+      top: 25.15%
+      left: 53.33%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -46,8 +109,8 @@ elements:
     entity: sensor.woonkamer_temperature
     title: null
     style:
-      top: 54.07%
-      left: 41.89%
+      top: 59.78%
+      left: 53.32%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -62,8 +125,8 @@ elements:
     entity: camera.carport
     title: null
     style:
-      top: 30.43%
-      left: 48.30%
+      top: 50.92%
+      left: 36.46%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -78,8 +141,8 @@ elements:
     entity: binary_sensor.multisensor_overkapping_motion_detection_2
     title: null
     style:
-      top: 49.27%
-      left: 66.07%
+      top: 35.63%
+      left: 48.89%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
@@ -94,8 +157,8 @@ elements:
     entity: camera.overkapping
     title: null
     style:
-      top: 73.12%
-      left: 68.37%
+      top: 35.99%
+      left: 62.00%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0.3)
