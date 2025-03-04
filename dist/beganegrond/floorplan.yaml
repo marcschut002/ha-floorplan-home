@@ -1,5 +1,5 @@
 type: picture-elements
-image: /local/floorplan/base.png?version=FBE1780581BFC3C870377160C45BBBE8
+image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=FBE1780581BFC3C870377160C45BBBE8
 elements:
   - type: conditional
     conditions:
@@ -16,7 +16,7 @@ elements:
         entity:
           - light.aanrecht
           - light.keukentafel_spot
-        image: /local/floorplan/light.aanrecht.png?version=72B7EC026438A618D78EE4532578FD76
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht.png?version=72B7EC026438A618D78EE4532578FD76
         filter: none
         style:
           left: 50%
@@ -37,7 +37,7 @@ elements:
         entity:
           - light.aanrecht
           - light.keukentafel_spot
-        image: /local/floorplan/light.aanrecht_light.keukentafel_spot.png?version=3E3FF8014A84AAC94AC01C43C11469F8
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot.png?version=3E3FF8014A84AAC94AC01C43C11469F8
         filter: none
         style:
           left: 50%
@@ -53,12 +53,12 @@ elements:
       - light.keukentafel_spot
     element:
       type: image
-      image: /local/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
       state_image:
         'on': >-
           ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-          '/local/floorplan/light.keukentafel_spot.png?version=3ED32A6EB487131DB269F3A3C3B5B2A1' :
-          '/local/floorplan/light.keukentafel_spot.red.png?version=C0D645D863FF4010959ACF60AAD3921C' }
+          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.png?version=3ED32A6EB487131DB269F3A3C3B5B2A1' :
+          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.red.png?version=C0D645D863FF4010959ACF60AAD3921C' }
       entity: light.keukentafel_spot
     style:
       filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
@@ -78,12 +78,12 @@ elements:
       - light.dimmer_overkapping
     element:
       type: image
-      image: /local/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
+      image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=56ABE4CBC175363DA0810882244B34FF
       state_image:
         'on': >-
           ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-          '/local/floorplan/light.dimmer_overkapping.png?version=CCCC82F03F6F5B47D66249FA8C876387' :
-          '/local/floorplan/light.dimmer_overkapping.red.png?version=23316B589F5D782F56DE7510A2F624F4' }
+          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=CCCC82F03F6F5B47D66249FA8C876387' :
+          '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=23316B589F5D782F56DE7510A2F624F4' }
       entity: light.dimmer_overkapping
     style:
       filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
