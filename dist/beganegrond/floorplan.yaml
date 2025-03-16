@@ -1,5 +1,5 @@
 type: picture-elements
-image: /local/floorplan/transparent.png?version=59AE3DF67F742F6E10D2F7580CDD4B27
+image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=59AE3DF67F742F6E10D2F7580CDD4B27
 elements:
   - type: conditional
     conditions:
@@ -10,7 +10,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/base.png?version=A7FD0DDC0431C4C70DFF9C8CEF7D69D0
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=A7FD0DDC0431C4C70DFF9C8CEF7D69D0
         filter: none
         style:
           left: 50%
@@ -30,7 +30,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.haard.png?version=86EB82915DEF82F9DBB42CC4B252BA58
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.haard.png?version=86EB82915DEF82F9DBB42CC4B252BA58
         filter: none
         style:
           left: 50%
@@ -50,7 +50,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.haard_light.erker.png?version=1B0A697385E9F3F3BFB894C241E2FEA9
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.haard_light.erker.png?version=1B0A697385E9F3F3BFB894C241E2FEA9
         filter: none
         style:
           left: 50%
@@ -70,7 +70,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.erker.png?version=E9B1056CA1E84559BB364D417DC7B852
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker.png?version=E9B1056CA1E84559BB364D417DC7B852
         filter: none
         style:
           left: 50%
@@ -93,7 +93,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.aanrecht.png?version=800DDCAF01BA307F46223091A0F64A2C
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht.png?version=800DDCAF01BA307F46223091A0F64A2C
         filter: none
         style:
           left: 50%
@@ -116,7 +116,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.aanrecht_light.keukentafel_spot.png?version=5B3ED779ECA6BB9366AE07CA59705E01
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot.png?version=5B3ED779ECA6BB9366AE07CA59705E01
         filter: none
         style:
           left: 50%
@@ -139,7 +139,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=59208AD7C07B1BD38E0A9EA1EF97EC34
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=59208AD7C07B1BD38E0A9EA1EF97EC34
         filter: none
         style:
           left: 50%
@@ -162,7 +162,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.aanrecht_light.afzuigkap.png?version=A0EC2F4B51DFE34600576C94AC0568A6
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.afzuigkap.png?version=A0EC2F4B51DFE34600576C94AC0568A6
         filter: none
         style:
           left: 50%
@@ -185,7 +185,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.keukentafel_spot.png?version=D362175ABF3934AB15E4DA1A54161E4E
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.png?version=D362175ABF3934AB15E4DA1A54161E4E
         filter: none
         style:
           left: 50%
@@ -208,7 +208,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=0621981EB3E144E9499D9AF09F4357C5
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=0621981EB3E144E9499D9AF09F4357C5
         filter: none
         style:
           left: 50%
@@ -231,7 +231,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.afzuigkap.png?version=47E1381B8CB9A26D919FE6A8023000EF
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.afzuigkap.png?version=47E1381B8CB9A26D919FE6A8023000EF
         filter: none
         style:
           left: 50%
@@ -248,7 +248,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/light.dimmer_overkapping.png?version=8F40A2D437FFD00FBF11454B22374285
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=8F40A2D437FFD00FBF11454B22374285
         filter: none
         style:
           left: 50%
