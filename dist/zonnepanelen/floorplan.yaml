@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/transparent.png?version=13534CF50ECE356F66D42F97D8A9D02E
+image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/transparent.png?version=003F7BE373B569B6C98E1F2F07CCB88A
 elements:
   - type: conditional
     conditions:
@@ -10,7 +10,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/base.png?version=E45C0E2D0EDAB71F1F77C216161DF68B
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/base.png?version=A44BBE518D40E00EBDE6E835F2B91E88
         filter: none
         style:
           left: 50%
@@ -33,7 +33,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv.png?version=25F73F731F40988E561104D9FDABEBF6
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv.png?version=921A4C30EA6F117540FDCF0A2DADD739
         filter: none
         style:
           left: 50%
@@ -56,7 +56,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv_light.erker_spots.png?version=2E2FB66BE4C064B8CDB44CA081B10857
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv_light.erker_spots.png?version=74A34FA4840A05C1CE0CCDA8DD78FD4F
         filter: none
         style:
           left: 50%
@@ -79,7 +79,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv_light.erker_spots_light.haard.png?version=A284FCADF34C5E9635E152754E7D49DD
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv_light.erker_spots_light.haard.png?version=E50AFC759C2E68F68D5EEB844B1AA68A
         filter: none
         style:
           left: 50%
@@ -102,7 +102,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv_light.haard.png?version=4DFC7D0FF66156223D31EF8C0BB9175D
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.tv_light.haard.png?version=38DFF6C396DF2BD823BF2C8C8CDBE5B6
         filter: none
         style:
           left: 50%
@@ -127,8 +127,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots.png?version=25F73F731F40988E561104D9FDABEBF6' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots.red.png?version=AACC98471A3CA838EF0C49FDBF3B8723' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots.png?version=921A4C30EA6F117540FDCF0A2DADD739' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots.red.png?version=694ADB2475D501FE63062906BBAD51DB' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -156,8 +156,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots_light.haard.png?version=4DFC7D0FF66156223D31EF8C0BB9175D' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots_light.haard.red.png?version=A2605228E57B18CC691934617E99D679' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots_light.haard.png?version=774E05722F97914BA0BDE87DE63D55B1' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.erker_spots_light.haard.red.png?version=ED4675A4329CB33B19389E58BDF7B64D' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -183,7 +183,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.haard.png?version=3CD26388B3E8A42D03074AAFAC69B450
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.haard.png?version=B58D17FDDBF720A035F5BE59BB870F34
         filter: none
         style:
           left: 50%
@@ -208,8 +208,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot.png?version=E240F89C29F83DE5F1D8CAC8CC0111F6' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot.red.png?version=7E8E0A5731A18B4AB52301EF285759BD' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot.png?version=F70FDCAA0843686CF546DBD745E49B74' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot.red.png?version=90EDB37F565B12FD19EB5152B0823F2E' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -237,8 +237,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht.png?version=49FF8B68ABE6C8E2F26F966D3DCABA50' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht.red.png?version=4DD401C96CAC69DEB9F92B3A70070FDC' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht.png?version=5CB884F840C043D86A053DFB5873FA7D' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht.red.png?version=07137749C20A0BD85A71B04C0A8B2F5A' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -266,8 +266,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht_light.afzuigkap.png?version=71A87A5201FD1F518CCA0E050EDD728A' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht_light.afzuigkap.red.png?version=EEDDD538442D662EB083EB335018953B' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht_light.afzuigkap.png?version=373EDA3458D8F41E29E446713CD8299B' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.aanrecht_light.afzuigkap.red.png?version=44D51885972EAF73F411327AA08360A4' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -295,8 +295,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=701057BE4EA39EF298E1A9B6BA071786' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.afzuigkap.red.png?version=725FC5FA47E5DA4F3D71FF976B3A63AF' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=4E635325A3DF4231F61D118DA550C649' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.keukentafel_spot_light.afzuigkap.red.png?version=80898FEE9AFE53D86F20C04E98ED9B14' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -324,8 +324,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht.png?version=1290735D8CDC5F503C77D83A37353E77' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht.red.png?version=900F27C71C4485CEE4B9A3DD736E9C41' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht.png?version=F2236EB66E78CBFE95731E186DE68F76' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht.red.png?version=57B8918D1661170315378255BC0E03DE' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -353,8 +353,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht_light.afzuigkap.png?version=C340C44428280E19C7566F82E812A0A8' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht_light.afzuigkap.red.png?version=4C81EB0FF22433F0B5B6F4DBC966C406' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht_light.afzuigkap.png?version=E06F2E52708F695F8EFBF6CDB27F4F4F' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.aanrecht_light.afzuigkap.red.png?version=0021EF4976050CDB8B9A8C76FD9B9DCB' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -380,7 +380,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.afzuigkap.png?version=93F26F5897E1EF487CE9812C9A91144A
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.afzuigkap.png?version=85C772DF15986F91EBF62A21590A0146
         filter: none
         style:
           left: 50%
@@ -405,8 +405,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.dimmer_overkapping.png?version=53D5FFF8E920B54BC3CE48D7330F456E' :
-              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.dimmer_overkapping.red.png?version=0EFEF9AC2F71E25AD7555C095E7CB296' }
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.dimmer_overkapping.png?version=B9ECB5EC4CE753E09935B1F780C3A25B' :
+              '/hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/light.dimmer_overkapping.red.png?version=570965C100CE1BCA520FB20CFBB24D0D' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -419,8 +419,8 @@ elements:
     entity: sensor.zuid_power
     title: null
     style:
-      top: 71.52%
-      left: 51.50%
+      top: 73.44%
+      left: 51.42%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0)
@@ -435,8 +435,8 @@ elements:
     entity: sensor.west_power
     title: null
     style:
-      top: 44.05%
-      left: 29.70%
+      top: 42.44%
+      left: 31.40%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0)
@@ -451,8 +451,8 @@ elements:
     entity: sensor.oost_power
     title: null
     style:
-      top: 29.60%
-      left: 53.66%
+      top: 28.04%
+      left: 53.34%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0)
