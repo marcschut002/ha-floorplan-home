@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=9C24125EA37834676492FD53FB36ABC5
+image: /local/floorplan/transparent.png?version=9C24125EA37834676492FD53FB36ABC5
 elements:
   - type: conditional
     conditions:
@@ -10,7 +10,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=CACE40A7FF92ABB42D22ABE1AD3E13C8
+        image: /local/floorplan/base.png?version=C5C081F8C638901407048FFCFF2D51EE
         filter: none
         style:
           left: 50%
@@ -34,8 +34,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots.png?version=468A99E3313B7DE45693863FD9A20575' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots.red.png?version=68191CDFAE9901F5B262008BB40025EE' }
+              '/local/floorplan/light.erker_spots.png?version=1C9E85E57FED09419BAF95A4064CBC91' :
+              '/local/floorplan/light.erker_spots.red.png?version=EA8C0FEB6395A492E9B2711D0DE6BFE4' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -62,8 +62,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.haard.png?version=E188C051472577A1F57A1B165DC51422' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.haard.red.png?version=63FB24E07C63C36032F5E5932F0C6830' }
+              '/local/floorplan/light.erker_spots_light.haard.png?version=56667FA8B3B2746FD6ED229DB305D735' :
+              '/local/floorplan/light.erker_spots_light.haard.red.png?version=F1CBA341E88E9100D2C554885CC69F57' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -90,8 +90,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.haard_light.tv.png?version=7E095236009094267FDEB24350F3D6F4' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.haard_light.tv.red.png?version=C9A4B642E44A7BE7288240B829689979' }
+              '/local/floorplan/light.erker_spots_light.haard_light.tv.png?version=D32977D58D9C1EF01BB7410EC3E9F344' :
+              '/local/floorplan/light.erker_spots_light.haard_light.tv.red.png?version=952CCAB92B2500363EF2D7DF2D09AA72' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -118,8 +118,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.tv.png?version=390519752000EEA37572A9AA9F2FD5B1' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.tv.red.png?version=3B1761C9C4B6B541AD67421EC6850BAF' }
+              '/local/floorplan/light.erker_spots_light.tv.png?version=79FED78879487E163D3045623A1FB901' :
+              '/local/floorplan/light.erker_spots_light.tv.red.png?version=3E03CDB9E33155E47FE21893D227CC33' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -145,7 +145,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.haard.png?version=5CB063664B8798F1D3C6328E15FCC4E3
+        image: /local/floorplan/light.haard.png?version=C806FCA142E0932ED5A3326F3AC2C9FB
         filter: none
         style:
           left: 50%
@@ -168,7 +168,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.haard_light.tv.png?version=CD3F4F3D97E2788B1511F31675AE8F94
+        image: /local/floorplan/light.haard_light.tv.png?version=74A2349228ED5A83339D13D8B3C3466F
         filter: none
         style:
           left: 50%
@@ -191,7 +191,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.tv.png?version=2AA52E0C4C4319AAB37D23219BBF731F
+        image: /local/floorplan/light.tv.png?version=F10484C7C7C274736FADF4764CA61909
         filter: none
         style:
           left: 50%
@@ -215,8 +215,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht.png?version=B67728619D0ACB9C1B6C460D1239C8F8' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht.red.png?version=47A36D9925264C187D5A574B19D335B0' }
+              '/local/floorplan/light.aanrecht.png?version=A825A02D0324D5598BC4E53366BA1878' :
+              '/local/floorplan/light.aanrecht.red.png?version=E595414C56F7698DBC5440A9B7FDC7BC' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -243,8 +243,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot.png?version=B67927B077FC8860E8E47D252084C4E6' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot.red.png?version=D394D0AAE2E4CEF705FE74AFF59AE4FA' }
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot.png?version=5E54FFA7612CA122E0904BB7B5F87F65' :
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot.red.png?version=D1BBAC2965B26B3AC25F1A2053030188' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -271,8 +271,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=3F49C9AF03C2450908A9544ECEC656E1' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=2E3DFA90A4D88ABDF0D923652C065755' }
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=E280BDE120EDB5FFDEFB19EEEDAC63FB' :
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=7A312CCBB4DBBF6D77901258E684A6E7' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -299,8 +299,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.afzuigkap.png?version=173B25DBE6EFA2BE436D3556985FEBFF' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.afzuigkap.red.png?version=736F26C36E0F5515BB6C2870B5E84C83' }
+              '/local/floorplan/light.aanrecht_light.afzuigkap.png?version=958663E9464F3873F01326B54D827268' :
+              '/local/floorplan/light.aanrecht_light.afzuigkap.red.png?version=7F6D7A6B30FBBB92E78F4A1B3C711C9E' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -327,8 +327,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.png?version=5E2899059551DE9F8018FA40D55A9352' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.red.png?version=217977EF5FE264EC7C4854F4092F161C' }
+              '/local/floorplan/light.keukentafel_spot.png?version=116BB4F9B7780BFE48B8B73DA5630FF8' :
+              '/local/floorplan/light.keukentafel_spot.red.png?version=E1F040B4B5092F010F7E08E6B8EACD62' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -355,8 +355,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=412D6A8028D2B978B035B6C1AA7284C8' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.afzuigkap.red.png?version=80C345E9B58771038206B8A1FA7EC0D7' }
+              '/local/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=3E4862F23CE2227F21141BA67830B336' :
+              '/local/floorplan/light.keukentafel_spot_light.afzuigkap.red.png?version=7EEBE0323F2B07D2AE2941E2EA3011FF' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -382,7 +382,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.afzuigkap.png?version=C76E736E27BBC3978D09CAD83504320F
+        image: /local/floorplan/light.afzuigkap.png?version=D0C9DF38EF6B9C5B4A2F7670017A58D4
         filter: none
         style:
           left: 50%
@@ -406,8 +406,8 @@ elements:
           type: image
           image: >-
               ${COLOR_MODE === 'color_temp' || COLOR_MODE === 'brightness' || ((COLOR_MODE === 'rgb' || COLOR_MODE === 'hs') && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=4380BED2FF7BF55697C897D73BD18624' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=143425F86F9B36E0D36C0F30F57FDE03' }
+              '/local/floorplan/light.dimmer_overkapping.png?version=5274D69C12ABBA97BF8EBD3E4DD26428' :
+              '/local/floorplan/light.dimmer_overkapping.red.png?version=C92BFD64DBB39C0AB5D743C42565E55C' }
         style:
           filter: '${ "hue-rotate(" + (LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
