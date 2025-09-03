@@ -1,118 +1,33 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=00A69DA9145B8CB42175277F9FE1A265
+image: /local/floorplan/transparent.png?version=2AAE484FE2FC5698B10F896F9E62456C
 elements:
   - type: conditional
+    title: Without device_tracker.rav4_parking_location, Base
     conditions:
-      []
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
     elements:
       - type: image
         tap_action:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/base.png?version=940138B73BDAB9066BA6120728A7CEC8
+        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/base.png?version=9CF534CD0A54DA85180ADFB039960E27
         filter: none
         style:
           left: 50%
           top: 50%
           width: 100%
   - type: conditional
-    conditions:
-      - condition: state
-        entity: light.tv
-        state: 'on'
-      - condition: state
-        entity: light.erker_spots
-        state: 'off'
-      - condition: state
-        entity: light.haard
-        state: 'off'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.tv.png?version=7615969A6196887F567F88398AA43835
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.tv
-        state: 'on'
-      - condition: state
-        entity: light.erker_spots
-        state: 'on'
-      - condition: state
-        entity: light.haard
-        state: 'off'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.tv_light.erker_spots.png?version=A523E0773FD70F7D844137DF16964D87
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.tv
-        state: 'on'
-      - condition: state
-        entity: light.erker_spots
-        state: 'on'
-      - condition: state
-        entity: light.haard
-        state: 'on'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.tv_light.erker_spots_light.haard.png?version=60153C77719FAD773B379DB6C7D5FA3B
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.tv
-        state: 'on'
-      - condition: state
-        entity: light.erker_spots
-        state: 'off'
-      - condition: state
-        entity: light.haard
-        state: 'on'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.tv_light.haard.png?version=DB4F2093056C2515D50D8C8FD42F962A
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.erker_spots
     conditions:
       - condition: state
         entity: light.erker_spots
         state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
     elements:
       - type: custom:config-template-card
         variables:
@@ -127,10 +42,10 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots.png?version=EE04FC50818505A05E5F288334D3EDFF' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots.red.png?version=639C58A98ADF43947D11C91C321F2CFE' }
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots.png?version=93E7D70AF51028BDF925C1DC74229EAD' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots.red.png?version=8755F9749847B42049351EE4A84625E7' }
         style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
           mix-blend-mode: lighten
           pointer-events: none
@@ -138,10 +53,14 @@ elements:
           top: 50%
           width: 100%
   - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.erker_spots
     conditions:
       - condition: state
         entity: light.erker_spots
         state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
     elements:
       - type: custom:config-template-card
         variables:
@@ -156,10 +75,10 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.haard.png?version=A532A59BDDC3C264ABE74455509CCF6F' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.erker_spots_light.haard.red.png?version=7BB5FED412BA27B201D23D28A50B42CA' }
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard.png?version=AF07E6035F9CA7E5788C0BA1A4F0D991' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard.red.png?version=AA294D28771C6727C620E4600449C6C4' }
         style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
           mix-blend-mode: lighten
           pointer-events: none
@@ -167,230 +86,386 @@ elements:
           top: 50%
           width: 100%
   - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.erker_spots
     conditions:
       - condition: state
-        entity: light.tv
-        state: 'off'
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard_light.tv.png?version=233EEC173903C292B0E736F0622D1F17' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard_light.tv.red.png?version=AFB4ECB6AAD3F21121C1BA45E4B10819' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.tv.png?version=C6394A84006B03E866B71B92373BEBA4' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.tv.red.png?version=81C487187006018978CDDED8F4BA527D' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.haard
+    conditions:
       - condition: state
         entity: light.erker_spots
         state: 'off'
       - condition: state
         entity: light.haard
         state: 'on'
+      - condition: state
+        entity: light.tv
+        state: 'off'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
     elements:
       - type: image
         tap_action:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.haard.png?version=F749352AA9D0DB530115B722ADD7FBE2
+        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.haard.png?version=F1114AF777F34E7BCB6BB6878B819557
         filter: none
         style:
           left: 50%
           top: 50%
           width: 100%
   - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.haard, light.tv
     conditions:
       - condition: state
-        entity: light.keukentafel_spot
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.keukentafel_spot'].state
-          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
-          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
-          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.keukentafel_spot
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.png?version=40998C5E85BC251C133F067CB2DE9C40' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot.red.png?version=630ADBEECBBBBAF290C3B3924BEA0863' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.keukentafel_spot
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.keukentafel_spot'].state
-          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
-          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
-          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.keukentafel_spot
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.aanrecht.png?version=4253CCFC711150C0433A19AE5092A731' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.aanrecht.red.png?version=4398E2BDAA4D82B31F21D6CB0ED57324' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.keukentafel_spot
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.keukentafel_spot'].state
-          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
-          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
-          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.keukentafel_spot
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.aanrecht_light.afzuigkap.png?version=A223C2F0D8F363E9EF784786AE02DABA' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.aanrecht_light.afzuigkap.red.png?version=3C1B6643257DB1B91BECEC062CDC9DEE' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.keukentafel_spot
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.keukentafel_spot'].state
-          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
-          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
-          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.keukentafel_spot
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=AE926F95DB109BCF2A3C5DFF8FBEC54A' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.keukentafel_spot_light.afzuigkap.red.png?version=876B7B3AFF89A90CF53FADDAB2D09A10' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.aanrecht
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.aanrecht'].state
-          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
-          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
-          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.aanrecht
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht.png?version=58DCC50583A61977358BA725C75CEB57' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht.red.png?version=15705961387EB22728608DD12D793C6D' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.aanrecht
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.aanrecht'].state
-          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
-          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
-          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.aanrecht
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.afzuigkap.png?version=9D4BF6EA44E38E05BBB4C4C47DEE1D63' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.aanrecht_light.afzuigkap.red.png?version=29566F0C2F82F7A6DA61EE15CEDFA8C6' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    conditions:
-      - condition: state
-        entity: light.keukentafel_spot
+        entity: light.erker_spots
         state: 'off'
       - condition: state
+        entity: light.haard
+        state: 'on'
+      - condition: state
+        entity: light.tv
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.haard_light.tv.png?version=F138FF09EEC91FAC36D3220423F08CCE
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.tv
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'off'
+      - condition: state
+        entity: light.haard
+        state: 'off'
+      - condition: state
+        entity: light.tv
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.tv.png?version=BFA45B92623BC567750D706A3AD12DB1
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
         entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht.png?version=6AFC956D232B8200DE70A5EEF50297C7' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht.red.png?version=D9CD8A1DEB8D6A7EC5FDB2C6500C4F14' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot.png?version=D92F05D5DC644E8A1AA51AC78808973D' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot.red.png?version=264540AECE0729E503407C3B1990FB98' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=82E397063BDC69D07E25A93367E30B47' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=0F1C1A7339F3D32A0792DEB9CBCFAA4B' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.afzuigkap.png?version=80950875CF8A2E14D424B240D0C9CEF0' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.afzuigkap.red.png?version=5F060EE6330AF4BABBEF7DBA5BD3C65D' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.keukentafel_spot
+    conditions:
+      - condition: state
+        entity: light.keukentafel_spot
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.keukentafel_spot'].state
+          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
+          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
+          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.keukentafel_spot
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot.png?version=6B8A93231ABFFCE3FC7F123590386399' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot.red.png?version=4AC3B6ACB2E18C3256A88FECD6D771EE' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.keukentafel_spot
+    conditions:
+      - condition: state
+        entity: light.keukentafel_spot
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.keukentafel_spot'].state
+          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
+          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
+          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.keukentafel_spot
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot_light.afzuigkap.png?version=EA67723F7AD57864491253AF5CAE1A69' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot_light.afzuigkap.red.png?version=F164C8C37B43333D176D06F2ED919466' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.afzuigkap
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'off'
+      - condition: state
+        entity: light.keukentafel_spot
         state: 'off'
       - condition: state
         entity: light.afzuigkap
         state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
     elements:
       - type: image
         tap_action:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.afzuigkap.png?version=6877801995FDA474979D07A91A768C46
+        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.afzuigkap.png?version=250CE0FAF02DDA4DB6EC6A57ACEC52CB
         filter: none
         style:
           left: 50%
           top: 50%
           width: 100%
   - type: conditional
+    title: Without device_tracker.rav4_parking_location, light.dimmer_overkapping
     conditions:
       - condition: state
         entity: light.dimmer_overkapping
         state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state_not: 'Thuis'
     elements:
       - type: custom:config-template-card
         variables:
@@ -405,13 +480,518 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.png?version=06C40CDD23EB2F4A07B4120AC017B2B0' :
-              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/light.dimmer_overkapping.red.png?version=FAC9293ACDDA34BEABB09F70620C9A25' }
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.dimmer_overkapping.png?version=D381BA8D47C8FD6A46B202D2579915EC' :
+              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.dimmer_overkapping.red.png?version=580E81A2902F58ED35E4FF0C7BB756CE' }
         style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg)"}'
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
           mix-blend-mode: lighten
           pointer-events: none
           left: 50%
           top: 50%
           width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, Base
+    conditions:
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-visible/base.png?version=379EC2621EDB308E58B24061CC5E0205
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots.png?version=0C0814834408C6DC725FA895EB837A7D' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots.red.png?version=0D89AB1A6F302B1840CFE4FD8618AE54' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard.png?version=3C2E2164D18D082233DCAFF5D46C333F' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard.red.png?version=F6D7BE3A722FD7B84DBFCFEBF90E9714' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard_light.tv.png?version=96B203CF6D2D9AE02BFDB282CB695CF7' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard_light.tv.red.png?version=97F7EAF7B5DF5F7B4CB995AA304E803C' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.tv.png?version=6934AA0676931D2368585C0F48705CC3' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.tv.red.png?version=228B01F4B65F13B8DFFC7D0009D81C14' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.haard
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'off'
+      - condition: state
+        entity: light.haard
+        state: 'on'
+      - condition: state
+        entity: light.tv
+        state: 'off'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.haard.png?version=E15F3F9D1788EAFBC430C1DDDC64E629
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.haard, light.tv
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'off'
+      - condition: state
+        entity: light.haard
+        state: 'on'
+      - condition: state
+        entity: light.tv
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.haard_light.tv.png?version=4F156B4B0ACD7002B2E1A808CF8BD5AB
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.tv
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'off'
+      - condition: state
+        entity: light.haard
+        state: 'off'
+      - condition: state
+        entity: light.tv
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.tv.png?version=E523F69F7D0726401F660A4575CD25E4
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht.png?version=73CA2A3A84EE63AEB464156290B38F29' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht.red.png?version=9DCC6C2634B537D183E5CDBD8A7552C6' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot.png?version=A9BA4FC4330616F886E08869F6E93608' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot.red.png?version=A3AA7B102F02BEA948326EAC76941A23' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=E3FE48AB2F77877986780491E207294D' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=4DE6E9F20D316AD48C1EB770BE843BA6' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.aanrecht'].state
+          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
+          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
+          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.aanrecht
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.afzuigkap.png?version=BD6373CA93CD1287877C5CF59A6157E5' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.afzuigkap.red.png?version=0BA5FFE9EA3706D4EA6DCA8FA9F643F2' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.keukentafel_spot
+    conditions:
+      - condition: state
+        entity: light.keukentafel_spot
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.keukentafel_spot'].state
+          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
+          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
+          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.keukentafel_spot
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot.png?version=7A18407AFFB9D598D8880E055A0C1B48' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot.red.png?version=7C0EB6859CF5919A82966209EE398A61' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.keukentafel_spot
+    conditions:
+      - condition: state
+        entity: light.keukentafel_spot
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.keukentafel_spot'].state
+          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
+          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
+          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.keukentafel_spot
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot_light.afzuigkap.png?version=096B0AC1F315E182D2AB2C82EDF7CA0A' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot_light.afzuigkap.red.png?version=DFC96CA02C820445C8F3273842C2EA5B' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.afzuigkap
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'off'
+      - condition: state
+        entity: light.keukentafel_spot
+        state: 'off'
+      - condition: state
+        entity: light.afzuigkap
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.afzuigkap.png?version=ED0B6C9858E6F42DF905EA279EB24345
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: With device_tracker.rav4_parking_location, light.dimmer_overkapping
+    conditions:
+      - condition: state
+        entity: light.dimmer_overkapping
+        state: 'on'
+      - condition: state
+        entity: device_tracker.rav4_parking_location
+        state: 'Thuis'
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.dimmer_overkapping'].state
+          COLOR_MODE: states['light.dimmer_overkapping'].attributes.color_mode
+          LIGHT_COLOR: states['light.dimmer_overkapping'].attributes.hs_color
+          BRIGHTNESS: states['light.dimmer_overkapping'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.dimmer_overkapping
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.dimmer_overkapping.png?version=BE9A5521E5FE4C50D48E2CE16AB14EA0' :
+              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.dimmer_overkapping.red.png?version=9FFF77589F80F4063FD0B8BB38E30520' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: state-icon
+    entity: light.aanrecht
+    title: null
+    style:
+      top: 33.00%
+      left: 43.61%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
