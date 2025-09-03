@@ -1,5 +1,5 @@
 type: picture-elements
-image: /local/floorplan/transparent.png?version=2AAE484FE2FC5698B10F896F9E62456C
+image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/transparent.png?version=2AAE484FE2FC5698B10F896F9E62456C
 elements:
   - type: conditional
     title: Without device_tracker.rav4_parking_location, Base
@@ -13,7 +13,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/base.png?version=9CF534CD0A54DA85180ADFB039960E27
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/base.png?version=9CF534CD0A54DA85180ADFB039960E27
         filter: none
         style:
           left: 50%
@@ -42,8 +42,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots.png?version=93E7D70AF51028BDF925C1DC74229EAD' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots.red.png?version=8755F9749847B42049351EE4A84625E7' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots.png?version=93E7D70AF51028BDF925C1DC74229EAD' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots.red.png?version=8755F9749847B42049351EE4A84625E7' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -75,8 +75,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard.png?version=AF07E6035F9CA7E5788C0BA1A4F0D991' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard.red.png?version=AA294D28771C6727C620E4600449C6C4' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard.png?version=AF07E6035F9CA7E5788C0BA1A4F0D991' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard.red.png?version=AA294D28771C6727C620E4600449C6C4' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -108,8 +108,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard_light.tv.png?version=233EEC173903C292B0E736F0622D1F17' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard_light.tv.red.png?version=AFB4ECB6AAD3F21121C1BA45E4B10819' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard_light.tv.png?version=233EEC173903C292B0E736F0622D1F17' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.haard_light.tv.red.png?version=AFB4ECB6AAD3F21121C1BA45E4B10819' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -141,8 +141,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.tv.png?version=C6394A84006B03E866B71B92373BEBA4' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.tv.red.png?version=81C487187006018978CDDED8F4BA527D' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.tv.png?version=C6394A84006B03E866B71B92373BEBA4' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.erker_spots_light.tv.red.png?version=81C487187006018978CDDED8F4BA527D' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -172,7 +172,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.haard.png?version=F1114AF777F34E7BCB6BB6878B819557
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.haard.png?version=F1114AF777F34E7BCB6BB6878B819557
         filter: none
         style:
           left: 50%
@@ -199,7 +199,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.haard_light.tv.png?version=F138FF09EEC91FAC36D3220423F08CCE
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.haard_light.tv.png?version=F138FF09EEC91FAC36D3220423F08CCE
         filter: none
         style:
           left: 50%
@@ -226,7 +226,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.tv.png?version=BFA45B92623BC567750D706A3AD12DB1
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.tv.png?version=BFA45B92623BC567750D706A3AD12DB1
         filter: none
         style:
           left: 50%
@@ -255,8 +255,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht.png?version=6AFC956D232B8200DE70A5EEF50297C7' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht.red.png?version=D9CD8A1DEB8D6A7EC5FDB2C6500C4F14' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht.png?version=6AFC956D232B8200DE70A5EEF50297C7' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht.red.png?version=D9CD8A1DEB8D6A7EC5FDB2C6500C4F14' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -288,8 +288,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot.png?version=D92F05D5DC644E8A1AA51AC78808973D' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot.red.png?version=264540AECE0729E503407C3B1990FB98' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot.png?version=D92F05D5DC644E8A1AA51AC78808973D' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot.red.png?version=264540AECE0729E503407C3B1990FB98' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -321,8 +321,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=82E397063BDC69D07E25A93367E30B47' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=0F1C1A7339F3D32A0792DEB9CBCFAA4B' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=82E397063BDC69D07E25A93367E30B47' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=0F1C1A7339F3D32A0792DEB9CBCFAA4B' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -354,8 +354,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.afzuigkap.png?version=80950875CF8A2E14D424B240D0C9CEF0' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.afzuigkap.red.png?version=5F060EE6330AF4BABBEF7DBA5BD3C65D' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.afzuigkap.png?version=80950875CF8A2E14D424B240D0C9CEF0' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.aanrecht_light.afzuigkap.red.png?version=5F060EE6330AF4BABBEF7DBA5BD3C65D' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -387,8 +387,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot.png?version=6B8A93231ABFFCE3FC7F123590386399' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot.red.png?version=4AC3B6ACB2E18C3256A88FECD6D771EE' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot.png?version=6B8A93231ABFFCE3FC7F123590386399' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot.red.png?version=4AC3B6ACB2E18C3256A88FECD6D771EE' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -420,8 +420,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot_light.afzuigkap.png?version=EA67723F7AD57864491253AF5CAE1A69' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot_light.afzuigkap.red.png?version=F164C8C37B43333D176D06F2ED919466' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot_light.afzuigkap.png?version=EA67723F7AD57864491253AF5CAE1A69' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.keukentafel_spot_light.afzuigkap.red.png?version=F164C8C37B43333D176D06F2ED919466' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -451,7 +451,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-hidden/light.afzuigkap.png?version=250CE0FAF02DDA4DB6EC6A57ACEC52CB
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.afzuigkap.png?version=250CE0FAF02DDA4DB6EC6A57ACEC52CB
         filter: none
         style:
           left: 50%
@@ -480,8 +480,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.dimmer_overkapping.png?version=D381BA8D47C8FD6A46B202D2579915EC' :
-              '/local/floorplan/device_tracker.rav4_parking_location-hidden/light.dimmer_overkapping.red.png?version=580E81A2902F58ED35E4FF0C7BB756CE' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.dimmer_overkapping.png?version=D381BA8D47C8FD6A46B202D2579915EC' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-hidden/light.dimmer_overkapping.red.png?version=580E81A2902F58ED35E4FF0C7BB756CE' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -502,7 +502,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-visible/base.png?version=379EC2621EDB308E58B24061CC5E0205
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/base.png?version=379EC2621EDB308E58B24061CC5E0205
         filter: none
         style:
           left: 50%
@@ -531,8 +531,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots.png?version=0C0814834408C6DC725FA895EB837A7D' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots.red.png?version=0D89AB1A6F302B1840CFE4FD8618AE54' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots.png?version=0C0814834408C6DC725FA895EB837A7D' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots.red.png?version=0D89AB1A6F302B1840CFE4FD8618AE54' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -564,8 +564,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard.png?version=3C2E2164D18D082233DCAFF5D46C333F' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard.red.png?version=F6D7BE3A722FD7B84DBFCFEBF90E9714' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard.png?version=3C2E2164D18D082233DCAFF5D46C333F' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard.red.png?version=F6D7BE3A722FD7B84DBFCFEBF90E9714' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -597,8 +597,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard_light.tv.png?version=96B203CF6D2D9AE02BFDB282CB695CF7' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard_light.tv.red.png?version=97F7EAF7B5DF5F7B4CB995AA304E803C' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard_light.tv.png?version=96B203CF6D2D9AE02BFDB282CB695CF7' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.haard_light.tv.red.png?version=97F7EAF7B5DF5F7B4CB995AA304E803C' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -630,8 +630,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.tv.png?version=6934AA0676931D2368585C0F48705CC3' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.tv.red.png?version=228B01F4B65F13B8DFFC7D0009D81C14' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.tv.png?version=6934AA0676931D2368585C0F48705CC3' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.erker_spots_light.tv.red.png?version=228B01F4B65F13B8DFFC7D0009D81C14' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -661,7 +661,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.haard.png?version=E15F3F9D1788EAFBC430C1DDDC64E629
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.haard.png?version=E15F3F9D1788EAFBC430C1DDDC64E629
         filter: none
         style:
           left: 50%
@@ -688,7 +688,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.haard_light.tv.png?version=4F156B4B0ACD7002B2E1A808CF8BD5AB
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.haard_light.tv.png?version=4F156B4B0ACD7002B2E1A808CF8BD5AB
         filter: none
         style:
           left: 50%
@@ -715,7 +715,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.tv.png?version=E523F69F7D0726401F660A4575CD25E4
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.tv.png?version=E523F69F7D0726401F660A4575CD25E4
         filter: none
         style:
           left: 50%
@@ -744,8 +744,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht.png?version=73CA2A3A84EE63AEB464156290B38F29' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht.red.png?version=9DCC6C2634B537D183E5CDBD8A7552C6' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht.png?version=73CA2A3A84EE63AEB464156290B38F29' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht.red.png?version=9DCC6C2634B537D183E5CDBD8A7552C6' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -777,8 +777,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot.png?version=A9BA4FC4330616F886E08869F6E93608' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot.red.png?version=A3AA7B102F02BEA948326EAC76941A23' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot.png?version=A9BA4FC4330616F886E08869F6E93608' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot.red.png?version=A3AA7B102F02BEA948326EAC76941A23' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -810,8 +810,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=E3FE48AB2F77877986780491E207294D' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=4DE6E9F20D316AD48C1EB770BE843BA6' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=E3FE48AB2F77877986780491E207294D' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=4DE6E9F20D316AD48C1EB770BE843BA6' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -843,8 +843,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.afzuigkap.png?version=BD6373CA93CD1287877C5CF59A6157E5' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.afzuigkap.red.png?version=0BA5FFE9EA3706D4EA6DCA8FA9F643F2' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.afzuigkap.png?version=BD6373CA93CD1287877C5CF59A6157E5' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.aanrecht_light.afzuigkap.red.png?version=0BA5FFE9EA3706D4EA6DCA8FA9F643F2' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -876,8 +876,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot.png?version=7A18407AFFB9D598D8880E055A0C1B48' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot.red.png?version=7C0EB6859CF5919A82966209EE398A61' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot.png?version=7A18407AFFB9D598D8880E055A0C1B48' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot.red.png?version=7C0EB6859CF5919A82966209EE398A61' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -909,8 +909,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot_light.afzuigkap.png?version=096B0AC1F315E182D2AB2C82EDF7CA0A' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot_light.afzuigkap.red.png?version=DFC96CA02C820445C8F3273842C2EA5B' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot_light.afzuigkap.png?version=096B0AC1F315E182D2AB2C82EDF7CA0A' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.keukentafel_spot_light.afzuigkap.red.png?version=DFC96CA02C820445C8F3273842C2EA5B' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -940,7 +940,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/device_tracker.rav4_parking_location-visible/light.afzuigkap.png?version=ED0B6C9858E6F42DF905EA279EB24345
+        image: /hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.afzuigkap.png?version=ED0B6C9858E6F42DF905EA279EB24345
         filter: none
         style:
           left: 50%
@@ -969,8 +969,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.dimmer_overkapping.png?version=BE9A5521E5FE4C50D48E2CE16AB14EA0' :
-              '/local/floorplan/device_tracker.rav4_parking_location-visible/light.dimmer_overkapping.red.png?version=9FFF77589F80F4063FD0B8BB38E30520' }
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.dimmer_overkapping.png?version=BE9A5521E5FE4C50D48E2CE16AB14EA0' :
+              '/hacsfiles/ha-floorplan-home/beganegrond/floorplan/device_tracker.rav4_parking_location-visible/light.dimmer_overkapping.red.png?version=9FFF77589F80F4063FD0B8BB38E30520' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
