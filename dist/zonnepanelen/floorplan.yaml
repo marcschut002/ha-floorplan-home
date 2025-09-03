@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/transparent.png?version=ADBD173B2AE27AA5617FBBE84F973896
+image: /local/floorplan/transparent.png?version=ADBD173B2AE27AA5617FBBE84F973896
 elements:
   - type: conditional
     title: Base
@@ -11,7 +11,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/base.png?version=58F0DECEB2AC41AD5B8D86E8F16FB2A5
+        image: /local/floorplan/base.png?version=58F0DECEB2AC41AD5B8D86E8F16FB2A5
         filter: none
         style:
           left: 50%
@@ -25,7 +25,7 @@ elements:
       left: 51.51%
       border-radius: 50%
       text-align: center
-      background-color: rgba(255, 255, 255, 0)
+      background-color: rgba(0, 0, 0, 0.5)
       opacity: 100%
     tap_action:
       action: more-info
@@ -38,7 +38,7 @@ elements:
     title: null
     style:
       top: 36.68%
-      left: 29.82%
+      left: 15.00%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0)
@@ -54,7 +54,7 @@ elements:
     title: null
     style:
       top: 25.75%
-      left: 53.55%
+      left: 67.00%
       border-radius: 50%
       text-align: center
       background-color: rgba(255, 255, 255, 0)
