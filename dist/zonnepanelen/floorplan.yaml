@@ -1,5 +1,5 @@
 type: picture-elements
-image: /local/floorplan/transparent.png?version=ADBD173B2AE27AA5617FBBE84F973896
+image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/transparent.png?version=ADBD173B2AE27AA5617FBBE84F973896
 elements:
   - type: conditional
     title: Base
@@ -11,7 +11,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /local/floorplan/base.png?version=E845802CABEBBAD9F4AED8A26F1C15B1
+        image: /hacsfiles/ha-floorplan-home/zonnepanelen/floorplan/base.png?version=E845802CABEBBAD9F4AED8A26F1C15B1
         filter: none
         style:
           left: 50%
