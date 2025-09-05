@@ -6,3 +6,7 @@ sed -i '' 's#'$find'#'$replace'#g' dist/beganegrond/floorplan.yaml
 find='/local/'
 replace='/hacsfiles/ha-floorplan-home/zonnepanelen/'
 sed -i '' 's#'$find'#'$replace'#g' dist/zonnepanelen/floorplan.yaml
+
+find='/local/'
+replace='/hacsfiles/ha-floorplan-home/keuken/'
+sed -i '' 's#'$find'#'$replace'#g' dist/keuken/floorplan.yaml
