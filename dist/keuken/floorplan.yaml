@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/keuken/floorplan/transparent.png?version=184C69EAABDECDBD798BFF0469985415
+image: /local/floorplan/transparent.png?version=EC848065A8718B261C3D4641339005F1
 elements:
   - type: conditional
     title: Base
@@ -11,199 +11,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/base.png?version=9BF3A4022BD869ACFF005C39CC218B0D
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.erker_spots
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.erker_spots'].state
-          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
-          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
-          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.erker_spots
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots.png?version=184C69EAABDECDBD798BFF0469985415' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots.red.png?version=184C69EAABDECDBD798BFF0469985415' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.erker_spots
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.erker_spots'].state
-          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
-          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
-          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.erker_spots
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots_light.haard.png?version=184C69EAABDECDBD798BFF0469985415' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots_light.haard.red.png?version=184C69EAABDECDBD798BFF0469985415' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.erker_spots
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.erker_spots'].state
-          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
-          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
-          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.erker_spots
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots_light.haard_light.tv.png?version=184C69EAABDECDBD798BFF0469985415' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots_light.haard_light.tv.red.png?version=184C69EAABDECDBD798BFF0469985415' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.erker_spots
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.erker_spots'].state
-          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
-          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
-          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.erker_spots
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots_light.tv.png?version=184C69EAABDECDBD798BFF0469985415' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.erker_spots_light.tv.red.png?version=184C69EAABDECDBD798BFF0469985415' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.haard
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'off'
-      - condition: state
-        entity: light.haard
-        state: 'on'
-      - condition: state
-        entity: light.tv
-        state: 'off'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/light.haard.png?version=184C69EAABDECDBD798BFF0469985415
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.haard, light.tv
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'off'
-      - condition: state
-        entity: light.haard
-        state: 'on'
-      - condition: state
-        entity: light.tv
-        state: 'on'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/light.haard_light.tv.png?version=184C69EAABDECDBD798BFF0469985415
-        filter: none
-        style:
-          left: 50%
-          top: 50%
-          width: 100%
-  - type: conditional
-    title: light.tv
-    conditions:
-      - condition: state
-        entity: light.erker_spots
-        state: 'off'
-      - condition: state
-        entity: light.haard
-        state: 'off'
-      - condition: state
-        entity: light.tv
-        state: 'on'
-    elements:
-      - type: image
-        tap_action:
-          action: none
-        hold_action:
-          action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/light.tv.png?version=184C69EAABDECDBD798BFF0469985415
+        image: /local/floorplan/base.png?version=9759EEE17952126A53490FE31396F857
         filter: none
         style:
           left: 50%
@@ -229,8 +37,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht.png?version=602338D57D35B5AE1D9B8AAD21B4D553' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht.red.png?version=7E290A1502B264406D4554E92057653D' }
+              '/local/floorplan/light.aanrecht.png?version=8DBE56013C49B7EEB4EB41EDAA4173F4' :
+              '/local/floorplan/light.aanrecht.red.png?version=4D6E7F72D542DFEE5CEABD4F8632AABD' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -259,8 +67,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht_light.keukentafel_spot.png?version=4BC8FAB50F1CE3745CD05BD19A140827' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht_light.keukentafel_spot.red.png?version=6D976651B3B6AF859EFB5309A84CB8F9' }
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot.png?version=F8B8BB233145A72DB1AFAB4189363203' :
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot.red.png?version=D4A2015E7500C1CC6D10AD1753440B18' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -289,8 +97,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.png?version=0194A8DAB7C5E7364E960C4C50E733E4' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap.red.png?version=EF3F84FDD3C6F35927C3E171ECED5B26' }
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap_lamp.png?version=841178A0705779FDEB10A104F34403DA' :
+              '/local/floorplan/light.aanrecht_light.keukentafel_spot_light.afzuigkap_lamp.red.png?version=25258EDA43BED05C18AF07BE12061FA0' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -319,8 +127,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht_light.afzuigkap.png?version=816E4F473EED91626A388A36A18261C6' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht_light.afzuigkap.red.png?version=5DE93BF3C2BDD803B5459D24E4AE39B2' }
+              '/local/floorplan/light.aanrecht_light.afzuigkap_lamp.png?version=B8AEBAF9A74FF9850BFD0B960206182F' :
+              '/local/floorplan/light.aanrecht_light.afzuigkap_lamp.red.png?version=B5FFB6D79B3E5AF4EB76B6D1D1C08639' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -349,8 +157,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.keukentafel_spot.png?version=23C57786BF592BC5AE917A7FA63AB963' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.keukentafel_spot.red.png?version=B0E51B8CAA6E670CAD646043A67B13DF' }
+              '/local/floorplan/light.keukentafel_spot.png?version=88CD28C21E67E2EF1604F8D581627C5D' :
+              '/local/floorplan/light.keukentafel_spot.red.png?version=2FD553C1C13A2BC92C17F28CD6BBC4DF' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -379,8 +187,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.keukentafel_spot_light.afzuigkap.png?version=AC3146895E7EC192CEAADA12B25DF443' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.keukentafel_spot_light.afzuigkap.red.png?version=8907C91D0325D8FE25F27DF18D1511E4' }
+              '/local/floorplan/light.keukentafel_spot_light.afzuigkap_lamp.png?version=1606C89BC125158E8A43C8B00136F220' :
+              '/local/floorplan/light.keukentafel_spot_light.afzuigkap_lamp.red.png?version=621F9F799C932B9F30E2A74D61349E94' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -390,7 +198,7 @@ elements:
           top: 50%
           width: 100%
   - type: conditional
-    title: light.afzuigkap
+    title: light.afzuigkap_lamp
     conditions:
       - condition: state
         entity: light.aanrecht
@@ -399,7 +207,7 @@ elements:
         entity: light.keukentafel_spot
         state: 'off'
       - condition: state
-        entity: light.afzuigkap
+        entity: light.afzuigkap_lamp
         state: 'on'
     elements:
       - type: image
@@ -407,39 +215,58 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/light.afzuigkap.png?version=4D5CF98C9036E37AD9E33FBFCFBB7936
+        image: /local/floorplan/light.afzuigkap_lamp.png?version=1E7CC460444F3498453EC464CAAF9AA8
         filter: none
         style:
           left: 50%
           top: 50%
           width: 100%
-  - type: conditional
-    title: light.dimmer_overkapping
-    conditions:
-      - condition: state
-        entity: light.dimmer_overkapping
-        state: 'on'
-    elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.dimmer_overkapping'].state
-          COLOR_MODE: states['light.dimmer_overkapping'].attributes.color_mode
-          LIGHT_COLOR: states['light.dimmer_overkapping'].attributes.hs_color
-          BRIGHTNESS: states['light.dimmer_overkapping'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.dimmer_overkapping
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.dimmer_overkapping.png?version=184C69EAABDECDBD798BFF0469985415' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.dimmer_overkapping.red.png?version=184C69EAABDECDBD798BFF0469985415' }
-        style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
-          left: 50%
-          top: 50%
-          width: 100%
+  - type: state-icon
+    entity: light.aanrecht
+    title: null
+    icon: ICON
+    style:
+      top: 8.08%
+      left: 35.55%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.keukentafel_spot
+    title: null
+    style:
+      top: 65.49%
+      left: 57.45%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.afzuigkap_lamp
+    title: null
+    style:
+      top: 14.85%
+      left: 47.10%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(255, 255, 255, 0.3)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
