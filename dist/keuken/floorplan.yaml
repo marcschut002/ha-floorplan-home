@@ -1,58 +1,55 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/keuken/floorplan/transparent.png?version=DB6DFF23E2290A1E367B487F579395C8
+image: /local/floorplan/transparent.png?version=34DAD85430A2C721DE27C16563E05928
 elements:
   - type: conditional
-    title: Base
+    title: Day-time, Base
     conditions:
-      []
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
     elements:
       - type: image
         tap_action:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/base.png?version=B148E362B3502363E83B01B9285BB923
+        image: /local/floorplan/1500/base.png?version=DCC94764159B4A0736E8B6CE41F72219
         filter: none
         style:
           left: 50%
           top: 50%
           width: 100%
   - type: conditional
-    title: light.aanrecht
+    title: Day-time, light.aanrecht
     conditions:
       - condition: state
         entity: light.aanrecht
         state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
     elements:
-      - type: custom:config-template-card
-        variables:
-          LIGHT_STATE: states['light.aanrecht'].state
-          COLOR_MODE: states['light.aanrecht'].attributes.color_mode
-          LIGHT_COLOR: states['light.aanrecht'].attributes.hs_color
-          BRIGHTNESS: states['light.aanrecht'].attributes.brightness
-          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
-        entities:
-          - light.aanrecht
-        element:
-          type: image
-          image: >-
-              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht.png?version=D37AF17E7B2008439DC442CFE52D58CE' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.aanrecht.red.png?version=016D8BB20C6DCFC29673B5837FE29E7F' }
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/1500/light.aanrecht.png?version=44BF5D8D7F82CD06C3259C4707BD9CFF
+        filter: none
         style:
-          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
-          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
-          mix-blend-mode: lighten
-          pointer-events: none
           left: 50%
           top: 50%
           width: 100%
+          mix-blend-mode: lighten
   - type: conditional
-    title: light.keukentafel_spot
+    title: Day-time, light.keukentafel_spot
     conditions:
       - condition: state
         entity: light.keukentafel_spot
         state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
     elements:
       - type: custom:config-template-card
         variables:
@@ -67,8 +64,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.keukentafel_spot.png?version=B1DBDCDE1ADE4105E6D86FFA01708270' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/light.keukentafel_spot.red.png?version=D2761C104FECA5EA02023DCE86D59E68' }
+              '/local/floorplan/1500/light.keukentafel_spot.png?version=66CDDA767C8451E1BFE308ADB795E048' :
+              '/local/floorplan/1500/light.keukentafel_spot.red.png?version=E89D8A1D3300D36D5A72D2AF204F5FAB' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -78,18 +75,116 @@ elements:
           top: 50%
           width: 100%
   - type: conditional
-    title: light.afzuigkap_lamp
+    title: Day-time, light.afzuigkap_lamp
     conditions:
       - condition: state
         entity: light.afzuigkap_lamp
         state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
     elements:
       - type: image
         tap_action:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/light.afzuigkap_lamp.png?version=7AE19C20C57FB2B1617EE484DF877ED0
+        image: /local/floorplan/1500/light.afzuigkap_lamp.png?version=8743A4980B30891FA447A6591EB5357B
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Night-time, Base
+    conditions:
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/base.png?version=B5D218BF3CB0DE6BBB5EC173572ED7C4
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Night-time, light.aanrecht
+    conditions:
+      - condition: state
+        entity: light.aanrecht
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/light.aanrecht.png?version=E274FBDAC5C27A325F9746015CD8C9BF
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Night-time, light.keukentafel_spot
+    conditions:
+      - condition: state
+        entity: light.keukentafel_spot
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.keukentafel_spot'].state
+          COLOR_MODE: states['light.keukentafel_spot'].attributes.color_mode
+          LIGHT_COLOR: states['light.keukentafel_spot'].attributes.hs_color
+          BRIGHTNESS: states['light.keukentafel_spot'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.keukentafel_spot
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/2015/light.keukentafel_spot.png?version=322AA54E501FE33FA269590AE86FCEDA' :
+              '/local/floorplan/2015/light.keukentafel_spot.red.png?version=5BC66D4B36490E7CE83C4A9F6CC7B618' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Night-time, light.afzuigkap_lamp
+    conditions:
+      - condition: state
+        entity: light.afzuigkap_lamp
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/light.afzuigkap_lamp.png?version=6DE873ADB601611523029BE5394DF7AF
         filter: none
         style:
           left: 50%
@@ -99,13 +194,12 @@ elements:
   - type: state-icon
     entity: light.aanrecht
     title: null
-    icon: ICON
     style:
-      top: 8.72%
-      left: 10.71%
+      top: 30.62%
+      left: 23.93%
       border-radius: 50%
       text-align: center
-      background-color: rgba(0, 0, 0, 0.5)
+      background-color: rgba(255, 255, 255, 0.3)
       opacity: 100%
     tap_action:
       action: toggle
@@ -117,8 +211,8 @@ elements:
     entity: light.keukentafel_spot
     title: null
     style:
-      top: 51.16%
-      left: 91.09%
+      top: 63.18%
+      left: 80.49%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
@@ -133,8 +227,8 @@ elements:
     entity: light.afzuigkap_lamp
     title: null
     style:
-      top: 7.77%
-      left: 34.61%
+      top: 29.86%
+      left: 38.37%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)

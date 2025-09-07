@@ -16,3 +16,9 @@ Floorplan for home
 * Width: 1406
 * Height: 1332
 * Output Dir: /Users/marcschut/Dev/Repositories/marcschut002/ha-floorplan-home/dist/zonnepanelen
+
+## keuken
+
+Sensitivy: 75
+Render time: 05/09/2025 20:15
+Quality: High
