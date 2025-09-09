@@ -19,6 +19,8 @@ Floorplan for home
 
 ## keuken
 
+* Gezichtspunt: Zonnepanelen
+
 Sensitivy: 75
 Render time: 05/09/2025 20:15
 Quality: High

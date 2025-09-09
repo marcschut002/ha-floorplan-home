@@ -1,0 +1,383 @@
+type: picture-elements
+image: /local/floorplan/transparent.png?version=783031A0869EECA26AAB29497FC81767
+elements:
+  - type: conditional
+    title: Day-time, Base
+    conditions:
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/1500/base.png?version=74F44744DF8304E4A02357512E31B07B
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Day-time, light.dimmer_overkapping
+    conditions:
+      - condition: state
+        entity: light.dimmer_overkapping
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.dimmer_overkapping'].state
+          COLOR_MODE: states['light.dimmer_overkapping'].attributes.color_mode
+          LIGHT_COLOR: states['light.dimmer_overkapping'].attributes.hs_color
+          BRIGHTNESS: states['light.dimmer_overkapping'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.dimmer_overkapping
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/1500/light.dimmer_overkapping.png?version=783031A0869EECA26AAB29497FC81767' :
+              '/local/floorplan/1500/light.dimmer_overkapping.red.png?version=783031A0869EECA26AAB29497FC81767' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Day-time, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/1500/light.erker_spots.png?version=97C1FA0BF081D62358CA2F54404262AE' :
+              '/local/floorplan/1500/light.erker_spots.red.png?version=4C0FAAF0E8878C97FAC5366E0A96CCEA' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Day-time, light.haard
+    conditions:
+      - condition: state
+        entity: light.haard
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/1500/light.haard.png?version=7CDEF6589398B730B219FA25B945443A
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Day-time, light.tv
+    conditions:
+      - condition: state
+        entity: light.tv
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/1500/light.tv.png?version=1BC749198AA4CB4689DCEAE28A8CAD7A
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Day-time, light.dressoir
+    conditions:
+      - condition: state
+        entity: light.dressoir
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: above_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/1500/light.dressoir.png?version=CBF7F21B2F231A17098A732724DA1972
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Night-time, Base
+    conditions:
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/base.png?version=6456CF01F1441F52F10A021B73F887AA
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Night-time, light.dimmer_overkapping
+    conditions:
+      - condition: state
+        entity: light.dimmer_overkapping
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.dimmer_overkapping'].state
+          COLOR_MODE: states['light.dimmer_overkapping'].attributes.color_mode
+          LIGHT_COLOR: states['light.dimmer_overkapping'].attributes.hs_color
+          BRIGHTNESS: states['light.dimmer_overkapping'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.dimmer_overkapping
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/2015/light.dimmer_overkapping.png?version=783031A0869EECA26AAB29497FC81767' :
+              '/local/floorplan/2015/light.dimmer_overkapping.red.png?version=783031A0869EECA26AAB29497FC81767' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Night-time, light.erker_spots
+    conditions:
+      - condition: state
+        entity: light.erker_spots
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: custom:config-template-card
+        variables:
+          LIGHT_STATE: states['light.erker_spots'].state
+          COLOR_MODE: states['light.erker_spots'].attributes.color_mode
+          LIGHT_COLOR: states['light.erker_spots'].attributes.hs_color
+          BRIGHTNESS: states['light.erker_spots'].attributes.brightness
+          isInColoredMode: colorMode => ['hs', 'rgb', 'rgbw', 'rgbww', 'white', 'xy'].includes(colorMode)
+        entities:
+          - light.erker_spots
+        element:
+          type: image
+          image: >-
+              ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
+              '/local/floorplan/2015/light.erker_spots.png?version=485CFA8399EC7886FF42D91775AD0033' :
+              '/local/floorplan/2015/light.erker_spots.red.png?version=3BB49C24EC02C8BFF0C636A86A34B4BE' }
+        style:
+          filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
+          opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
+          mix-blend-mode: lighten
+          pointer-events: none
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: conditional
+    title: Night-time, light.haard
+    conditions:
+      - condition: state
+        entity: light.haard
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/light.haard.png?version=A18D093AB2A87D3DB3057C276DA8B781
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Night-time, light.tv
+    conditions:
+      - condition: state
+        entity: light.tv
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/light.tv.png?version=9CE06AD4699569F21553FF2577595E6D
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: conditional
+    title: Night-time, light.dressoir
+    conditions:
+      - condition: state
+        entity: light.dressoir
+        state: 'on'
+      - condition: state
+        entity: sun.sun
+        state: below_horizon
+    elements:
+      - type: image
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: /local/floorplan/2015/light.dressoir.png?version=078E7D079D7BEB0CEC80B71F7FE06792
+        filter: none
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          mix-blend-mode: lighten
+  - type: state-icon
+    entity: light.dimmer_overkapping
+    title: null
+    style:
+      top: 48.72%
+      left: -61.33%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(0, 0, 0, 0.5)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.erker_spots
+    title: null
+    style:
+      top: 65.96%
+      left: 71.46%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(0, 0, 0, 0.5)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.haard
+    title: null
+    style:
+      top: 15.40%
+      left: 60.76%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(0, 0, 0, 0.5)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.tv
+    title: null
+    style:
+      top: 90.28%
+      left: 36.20%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(0, 0, 0, 0.5)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.dressoir
+    title: null
+    style:
+      top: 14.48%
+      left: 23.39%
+      border-radius: 50%
+      text-align: center
+      background-color: rgba(0, 0, 0, 0.5)
+      opacity: 100%
+    tap_action:
+      action: toggle
+    double_tap_action:
+      action: none
+    hold_action:
+      action: more-info
