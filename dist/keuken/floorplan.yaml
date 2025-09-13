@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/keuken/floorplan/transparent.png?version=34DAD85430A2C721DE27C16563E05928
+image: /local/floorplan/transparent.png?version=B7F768BCDAEBA33D222E657456393ED3
 elements:
   - type: conditional
     title: Day-time, Base
@@ -13,7 +13,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/1500/base.png?version=DCC94764159B4A0736E8B6CE41F72219
+        image: /local/floorplan/1500/base.png?version=C4FA9A24EF90CCF36A2322EC16F40009
         filter: none
         style:
           left: 50%
@@ -34,7 +34,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/1500/light.aanrecht.png?version=44BF5D8D7F82CD06C3259C4707BD9CFF
+        image: /local/floorplan/1500/light.aanrecht.png?version=5B99652EF70DE91D7BA02E27CC178AD0
         filter: none
         style:
           left: 50%
@@ -64,8 +64,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/1500/light.keukentafel_spot.png?version=66CDDA767C8451E1BFE308ADB795E048' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/1500/light.keukentafel_spot.red.png?version=E89D8A1D3300D36D5A72D2AF204F5FAB' }
+              '/local/floorplan/1500/light.keukentafel_spot.png?version=9264D06E838C9FFCC2B1905DB4706004' :
+              '/local/floorplan/1500/light.keukentafel_spot.red.png?version=4E56D9ABA011EAEF033228B7A9D99342' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -89,7 +89,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/1500/light.afzuigkap_lamp.png?version=8743A4980B30891FA447A6591EB5357B
+        image: /local/floorplan/1500/light.afzuigkap_lamp.png?version=988E7B3A8D0CCBDED2AF96E97D2962E2
         filter: none
         style:
           left: 50%
@@ -108,7 +108,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/2015/base.png?version=B5D218BF3CB0DE6BBB5EC173572ED7C4
+        image: /local/floorplan/2015/base.png?version=C9C73A036431196AF9EF1988E74A74D0
         filter: none
         style:
           left: 50%
@@ -129,7 +129,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/2015/light.aanrecht.png?version=E274FBDAC5C27A325F9746015CD8C9BF
+        image: /local/floorplan/2015/light.aanrecht.png?version=25E4C365B086C8547F4053366C8EF0A2
         filter: none
         style:
           left: 50%
@@ -159,8 +159,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/2015/light.keukentafel_spot.png?version=322AA54E501FE33FA269590AE86FCEDA' :
-              '/hacsfiles/ha-floorplan-home/keuken/floorplan/2015/light.keukentafel_spot.red.png?version=5BC66D4B36490E7CE83C4A9F6CC7B618' }
+              '/local/floorplan/2015/light.keukentafel_spot.png?version=52BB5B11D953D1A6C3E68115166E7103' :
+              '/local/floorplan/2015/light.keukentafel_spot.red.png?version=2CF0461728F7BC6018A4BB558FE7C9B2' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -184,7 +184,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/keuken/floorplan/2015/light.afzuigkap_lamp.png?version=6DE873ADB601611523029BE5394DF7AF
+        image: /local/floorplan/2015/light.afzuigkap_lamp.png?version=3DF3F60DB72649C3BA4675768062D981
         filter: none
         style:
           left: 50%
@@ -195,11 +195,11 @@ elements:
     entity: light.aanrecht
     title: null
     style:
-      top: 30.62%
-      left: 23.93%
+      top: 48.94%
+      left: 89.62%
       border-radius: 50%
       text-align: center
-      background-color: rgba(255, 255, 255, 0.3)
+      background-color: rgba(0, 0, 0, 0.5)
       opacity: 100%
     tap_action:
       action: toggle
@@ -211,8 +211,8 @@ elements:
     entity: light.keukentafel_spot
     title: null
     style:
-      top: 63.18%
-      left: 80.49%
+      top: 18.05%
+      left: 5.40%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
@@ -227,8 +227,8 @@ elements:
     entity: light.afzuigkap_lamp
     title: null
     style:
-      top: 29.86%
-      left: 38.37%
+      top: 50.36%
+      left: 63.03%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
