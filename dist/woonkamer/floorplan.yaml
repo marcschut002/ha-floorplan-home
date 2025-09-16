@@ -1,5 +1,5 @@
 type: picture-elements
-image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/transparent.png?version=783031A0869EECA26AAB29497FC81767
+image: /local/floorplan/transparent.png?version=1C1DF8629376E00593CE433608A69F6A
 elements:
   - type: conditional
     title: Day-time, Base
@@ -13,7 +13,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/1500/base.png?version=3CCDA40302CE1C8E19129637527C2389
+        image: /local/floorplan/1500/base.png?version=CB2AE69C8ED4A2D04EAFA658D69312BE
         filter: none
         style:
           left: 50%
@@ -42,8 +42,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/woonkamer/floorplan/1500/light.erker_spots.png?version=0A48D639F114F0C7C1E21A88466A93DC' :
-              '/hacsfiles/ha-floorplan-home/woonkamer/floorplan/1500/light.erker_spots.red.png?version=CE29EE656E70F0050041AAF4FDF64D0A' }
+              '/local/floorplan/1500/light.erker_spots.png?version=64CE156E48384487250B580A12B0E54C' :
+              '/local/floorplan/1500/light.erker_spots.red.png?version=A2CCEC3138F834609D86C5E9CC411776' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -67,7 +67,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/1500/light.haard.png?version=C93A7AD05F4FAC2EB76D91765A3012FD
+        image: /local/floorplan/1500/light.haard.png?version=93F0369D076887AFCBC12D3F617FC44F
         filter: none
         style:
           left: 50%
@@ -89,7 +89,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/1500/light.tv.png?version=108F77435A1581546B9FD788A2198FFD
+        image: /local/floorplan/1500/light.tv.png?version=33A6153FDC7016C68CCA07E0F55B8D13
         filter: none
         style:
           left: 50%
@@ -111,7 +111,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/1500/light.dressoir.png?version=4A8925F39E9CDE1A6F7666EDA633DB48
+        image: /local/floorplan/1500/light.dressoir.png?version=B561D37D6B04D4B40710A3E6FA6D51C8
         filter: none
         style:
           left: 50%
@@ -130,7 +130,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/2015/base.png?version=311754CB54574A930BC1E46399B8706A
+        image: /local/floorplan/2015/base.png?version=ABD2A47BA97F93AFA659EC4180F68240
         filter: none
         style:
           left: 50%
@@ -159,8 +159,8 @@ elements:
           type: image
           image: >-
               ${!isInColoredMode(COLOR_MODE) || (isInColoredMode(COLOR_MODE) && LIGHT_COLOR && LIGHT_COLOR[0] == 0 && LIGHT_COLOR[1] == 0) ?
-              '/hacsfiles/ha-floorplan-home/woonkamer/floorplan/2015/light.erker_spots.png?version=2563F70D654CDCECDFC8BE9C1E3B57D0' :
-              '/hacsfiles/ha-floorplan-home/woonkamer/floorplan/2015/light.erker_spots.red.png?version=25BBC0E7E2C96FBA495E2A26DE52945A' }
+              '/local/floorplan/2015/light.erker_spots.png?version=6B2346358EA482EC0A471130D49F3DF8' :
+              '/local/floorplan/2015/light.erker_spots.red.png?version=7DF198C068EA5D63C7733D22536B5067' }
         style:
           filter: '${ "hue-rotate(" + (isInColoredMode(COLOR_MODE) && LIGHT_COLOR ? LIGHT_COLOR[0] : 0) + "deg) saturate(" + (LIGHT_COLOR ? LIGHT_COLOR[1] / 100 : 1) + ")"}'
           opacity: '${LIGHT_STATE === ''on'' ? (BRIGHTNESS / 255) : ''100''}'
@@ -184,7 +184,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/2015/light.haard.png?version=9A11166B1817C85D226857EDB838B621
+        image: /local/floorplan/2015/light.haard.png?version=F155BBC160CD2E60754816459A61344D
         filter: none
         style:
           left: 50%
@@ -206,7 +206,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/2015/light.tv.png?version=26A037D1A49CF6D9032517F2983229FB
+        image: /local/floorplan/2015/light.tv.png?version=C8E4C3D69AD8CFE0AC7812A4079BCE07
         filter: none
         style:
           left: 50%
@@ -228,7 +228,7 @@ elements:
           action: none
         hold_action:
           action: none
-        image: /hacsfiles/ha-floorplan-home/woonkamer/floorplan/2015/light.dressoir.png?version=3C559A8FCDD7FBEA2F3412F2B428A850
+        image: /local/floorplan/2015/light.dressoir.png?version=1824B6D79894C6E59403616561EFD859
         filter: none
         style:
           left: 50%
@@ -239,8 +239,8 @@ elements:
     entity: light.erker_spots
     title: null
     style:
-      top: 64.59%
-      left: 68.67%
+      top: 42.92%
+      left: 94.45%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
@@ -255,8 +255,8 @@ elements:
     entity: light.haard
     title: null
     style:
-      top: 13.17%
-      left: 61.23%
+      top: 12.48%
+      left: 67.87%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
@@ -271,8 +271,8 @@ elements:
     entity: light.tv
     title: null
     style:
-      top: 88.48%
-      left: 36.42%
+      top: 102.09%
+      left: 23.79%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
@@ -287,8 +287,8 @@ elements:
     entity: light.dressoir
     title: null
     style:
-      top: 15.13%
-      left: 23.83%
+      top: 19.63%
+      left: 18.84%
       border-radius: 50%
       text-align: center
       background-color: rgba(0, 0, 0, 0.5)
